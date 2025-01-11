@@ -23,14 +23,22 @@ kbitset_t *wrap_kbs_init2(size_t ni, int fill);
  */
 kbitset_t *wrap_kbs_init(size_t ni);
 
-
 /**
  * <div rustbindgen replaces="kbs_insert"></div>
  */
 void wrap_kbs_insert(kbitset_t *bs, int i);
 
-
 /**
  * <div rustbindgen replaces="kbs_destroy"></div>
  */
 void wrap_kbs_destroy(kbitset_t *bs);
+
+/**
+ * <div rustbindgen replaces="hwrite"></div>
+ */
+ssize_t wrap_hwrite(hFILE *fp, const void *buf, size_t n);
+
+/**
+ * <div rustbindgen replaces="hread"></div>
+ */
+ssize_t wrap_hread(hFILE *fp, void *buf, size_t n);
